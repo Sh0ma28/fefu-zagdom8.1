@@ -3,7 +3,7 @@
 {% macro logo() %}
     <a href="{{ route('home') }}">
         <img
-            src="{{ 'images/logo.png' |asset }}"
+            src="{{ 'images/logo-black.png' |asset }}"
             alt="Загородый дом"
         >
     </a>
@@ -43,7 +43,7 @@
 {% endmacro %}
 
 {% macro button() %}
-    <button type="button" class="Button Button--primary">
+    <button type="button" class="Button Button--primary" data-uk-toggle="#feedback">
         Оставить заявку
     </button>
 {% endmacro %}
