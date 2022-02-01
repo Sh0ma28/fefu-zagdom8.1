@@ -8,7 +8,9 @@ $color-green--dark: #254741;
 }
 
 @import "./uikit.scss";
-@import "../layouts/base.scss";
+@import "./media.scss";
 @import "./elements.scss";
+@import "../layouts/base.scss";
 @import "../components/header/header.scss"; 
-@import "../components/site-nav/site-nav.scss"; 
+@import "../components/site-nav/site-nav.scss";
+@import "../components/contacts/contacts.scss";
