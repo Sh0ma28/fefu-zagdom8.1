@@ -19,5 +19,10 @@
         "resolve-url-loader": "^5.0.0",
         "sass": "^1.49.0",
         "sass-loader": "^12.4.0"
+    },
+    "dependencies": {
+        "laravel-mix-alias": "^1.0.3",
+        "postcss-axis": "^0.1.2",
+        "uikit": "^3.10.1"
     }
 }
