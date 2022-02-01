@@ -1,6 +1,58 @@
 {% extends '@layouts/base.twig' %}
 
+{% set scope = {
+    slides: [
+        {
+            desktopImage: 'images/mockup/slides/slide-desktop.png'|asset,
+            mobileImage: 'images/mockup/slides/slide-mobile.png'|asset,
+            title: 'Проектируем <br>и строим загородные дома',
+            text: 'Строим дома «под ключ»: от этапа проектирования и до финишной отделки помещений',
+        },
+        {
+            desktopImage: 'images/mockup/slides/slide-desktop.png'|asset,
+            mobileImage: 'images/mockup/slides/slide-mobile.png'|asset,
+            title: 'Lorem ipsum dolor sit amet',
+            text: 'consectetur adipiscing elit. Quisque tincidunt sit amet lacus id sagittis. Proin pretium nunc a sem egestas, eu consequat dolor aliquam. Integer facilisis elementum tristique. Quisque eleifend odio id magna luctus, in molestie erat consequat. Mauris eu mi ac purus pellentesque rhoncus a a ligula. Integer congue, lorem in imperdiet luctus, eros urna rutrum augue, at consequat neque odio at tortor. Vestibulum fringilla dui a sapien tincidunt congue. Proin ultrices est at magna laoreet tincidunt. Nulla a diam sed justo cursus condimentum eu non neque.',
+        },
+        {
+            desktopImage: 'images/mockup/slides/slide-desktop.png'|asset,
+            mobileImage: 'images/mockup/slides/slide-mobile.png'|asset,
+            title: 'Curabitur vel porttitor est',
+            text: 'Nunc mollis odio ut elementum sodales. Integer vitae viverra lacus, quis semper lorem. Duis efficitur porta urna id egestas. Quisque vel purus purus. Donec ornare mi quis aliquam aliquet. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Quisque tincidunt risus nibh, at elementum risus tempus quis. Pellentesque sit amet elit non est eleifend vulputate.',
+        },
+    ], 
+    featuredSection: {
+        title: 'Каждый проект <br>для нас - важный',
+        text: 'Мы строительная компания полного цикла.<br><br>Вникаем во все детали, разрабатываем планировку<br>будущего дома, продумываем конструктивные решения<br> и общую архитектурную концепцию',
+        items: [
+            {
+                icon: 'icons/house.svg'|asset,
+                title: '57 домов',
+                text: 'спроектировали и построили “под ключ”',
+            },
+            {
+                icon: 'icons/calendar.svg'|asset,
+                title: '14 лет',
+                text: 'мы на рынке загородного строительства',
+            },
+        ]
+    }
+} %}
+
 {% block main %}
 	<div class="Container">
+		<div class="Layout__section Layout__section--slider">
+            {% include '@components/slider/slider.twig' with {
+                items: scope.slides,
+            } %}
+        </div>
+        
+        <div class="Layout__section Layout__section--featured">
+            {% include '@components/featured-section/featured-section.twig' with {
+                title: scope.featuredSection.title,
+                text: scope.featuredSection.text,
+                items: scope.featuredSection.items,
+            } %}
+        </div>  
     </div>
 {% endblock %}

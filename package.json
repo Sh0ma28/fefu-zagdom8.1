@@ -23,6 +23,7 @@
     "dependencies": {
         "laravel-mix-alias": "^1.0.3",
         "postcss-axis": "^0.1.2",
+        "swiper": "^7.4.1",
         "uikit": "^3.10.1"
     }
 }
