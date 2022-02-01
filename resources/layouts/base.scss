@@ -27,6 +27,29 @@
     }
 }
 
+.Page {
+    padding-y: 40px 80px;
+
+    @include vw-sm-down {
+        padding-top: 20px;
+    }
+
+    &__breadcrumbs {
+        padding-bottom: 48px;
+
+        @include vw-sm-down {
+            padding-bottom: 32px;
+        }
+    }
+
+    &__title {
+        @include page-title-mixin;
+
+        margin-bottom: 32px;
+    }
+}
+
+
 .Container {
     @extend .uk-container;
 }
